@@ -10,8 +10,12 @@
 	<link rel="stylesheet" href="css/custom.css">
 	<link rel="stylesheet" href="css/normalize.css">
 
+    
+
 	<title>EDMSound</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+    
 
 </head>
 
@@ -35,7 +39,9 @@
 		</p>
 
 <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
-	<h2 id="evaluation results" style="text-align: center;">Unconditional Generation Results on SC09*</h2>
+    <h2 id="evaluation results" style="text-align: center;"> Section 1: Audio Generation with EDMSound </h2>
+    <h2 id="evaluation results" style="text-align: center;"> </h2>
+	<h3 id="evaluation results" style="text-align: center;">Unconditional Generation Results on SC09*</h3>
 		<div class="table-responsive pt-3">
 			<table class="table table-hover pt-2">
 			<thead>
@@ -51,7 +57,7 @@
 			</thead>
 			<tbody>
             <tr>
-			<td style="text-align: center"><b>Groun Truth</b></td>
+			<td style="text-align: center"><b>Training Sample</b></td>
 			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/sc09/sc09_0_gt.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/sc09/sc09_3_gt.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/sc09/sc09_5_gt.wav" autoplay/>Your browser does not support the audio element.</audio></td>
@@ -72,17 +78,17 @@
 			</table>
 			* Note: we generate the above samples using EDMSound unconditionally and manually label them for the table.
 		</div>
-</div>
-
-
-<div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
-	<h2 id="evaluation results" style="text-align: center;">Conditional Generation Results on DCASE2023 Task-7</h2>
+    <h2 id="evaluation results" style="text-align: center;"> </h2>
+    <h2 id="evaluation results" style="text-align: center;"> </h2>
+    <h2 id="evaluation results" style="text-align: center;"> </h2>
+    <h2 id="evaluation results" style="text-align: center;"> </h2>
+	<h3 id="evaluation results" style="text-align: center;">Conditional Generation Results on DCASE2023 Task-7</h3>
 		<div class="table-responsive pt-3">
 			<table class="table table-hover pt-2">
 			<thead>
 			<tr>
 			<th style="text-align: center; font-size: var(--dcaset-tab-font-size)">Category</th>
-			<th style="text-align: center; font-size: var(--dcaset-tab-font-size)">Ground Truth</th>
+			<th style="text-align: center; font-size: var(--dcaset-tab-font-size)">Training Sample</th>
 			<th style="text-align: center; font-size: var(--dcaset-tab-font-size)" colspan="2">EDMSound</th>
 			</tr>
 			</thead>
@@ -141,16 +147,14 @@
     <style>
         .row {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
-            align-items: center; /* Vertically center the content */
-			flex-direction: row;
         }
 
         .pair {
             text-align: center;
             margin: 10px;
-			display: flex;
-			flex-direction: column;
+            flex-basis: calc(33.33% - 20px); /* Adjust the width as needed */
         }
 
         img {
@@ -158,45 +162,252 @@
             height: auto;
         }
     </style>
-    <h2 id="evaluation results" style="text-align: center;">Matched Pairs from EDMSound</h2>
-    <div class="row">
-        <div class="pair">
-            <img src="images/edm_2_gen.png" alt="Image 1" style="width: 150px; height: 50px;">
-            <audio controls>
-                <source src="audios/dcase7/129.wav" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
+    <h2 id="evaluation results" style="text-align: center;"> Section 2: Replication Detectoin </h2>
+    <h2 id="evaluation results" style="text-align: center;"> </h2>
+	<h3 id="evaluation results" style="text-align: center;">Matched Pairs from EDMSound Generation</h3>
+        <div class="row">
+            <h4 id="evaluation results" style="text-align: left;">Generated audio samples</h4>
+            <div class="pair">
+                <img src="1.png" alt="Image 1">
+                <audio controls>
+                    <source src="audios/dcase7/129.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="pair">
+                <img src="1.png" alt="Image 2">
+                <audio controls>
+                    <source src="audios/dcase7/129.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="pair">
+                <img src="1.png" alt="Image 3">
+                <audio controls>
+                    <source src="audios/dcase7/129.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
         </div>
-        <div class="pair">
-            <img src="images/edm_2_gen.png" alt="Image 2" style="width: 100px; height: 50px;">
-            <audio controls>
-                <source src="audios/dcase7/129.wav" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
+        <h2 id="evaluation results" style="text-align: center;"> </h2>
+        <div class="row">
+            <h4 id="evaluation results" style="text-align: left;">Top-1 matches from training samples</h4>
+            <div class="pair">
+                <img src="1.png" alt="Image 1">
+                <audio controls>
+                    <source src="audios/dcase7/129.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="pair">
+                <img src="1.png" alt="Image 2">
+                <audio controls>
+                    <source src="audios/dcase7/129.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="pair">
+                <img src="1.png" alt="Image 3">
+                <audio controls>
+                    <source src="audios/dcase7/129.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
         </div>
-        <div class="pair">
-            <img src="images/edm_2_gen.png" alt="Image 3" style="width: 100px; height: 50px;">
-            <audio controls>
-                <source src="audios/dcase7/129.wav" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
+
+        <h2 id="evaluation results" style="text-align: center;"> </h2>
+        <h2 id="evaluation results" style="text-align: center;"> </h2>
+        <h2 id="evaluation results" style="text-align: center;"> </h2>
+        <h2 id="evaluation results" style="text-align: center;"> </h2>
+	<h3 id="evaluation results" style="text-align: center;">Matched Pairs from Scheibler et al Generation</h3>
+        <div class="row">
+            <h4 id="evaluation results" style="text-align: left;">Generated audio samples</h4>
+            <div class="pair">
+                <img src="1.png" alt="Image 1">
+                <audio controls>
+                    <source src="audios/dcase7/129.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="pair">
+                <img src="1.png" alt="Image 2">
+                <audio controls>
+                    <source src="audios/dcase7/129.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="pair">
+                <img src="1.png" alt="Image 3">
+                <audio controls>
+                    <source src="audios/dcase7/129.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
         </div>
-    </div>
+        <h2 id="evaluation results" style="text-align: center;"> </h2>
+        <div class="row">
+            <h4 id="evaluation results" style="text-align: left;">Top-1 matches from training samples</h4>
+            <div class="pair">
+                <img src="1.png" alt="Image 1">
+                <audio controls>
+                    <source src="audios/dcase7/129.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="pair">
+                <img src="1.png" alt="Image 2">
+                <audio controls>
+                    <source src="audios/dcase7/129.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="pair">
+                <img src="1.png" alt="Image 3">
+                <audio controls>
+                    <source src="audios/dcase7/129.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+
+        <h2 id="evaluation results" style="text-align: center;"> </h2>
+        <h2 id="evaluation results" style="text-align: center;"> </h2>
+        <h2 id="evaluation results" style="text-align: center;"> </h2>
+        <h2 id="evaluation results" style="text-align: center;"> </h2>
+	<h3 id="evaluation results" style="text-align: center;">Matched Pairs from Yi et al Generation</h3>
+        <div class="row">
+            <h4 id="evaluation results" style="text-align: left;">Generated audio samples</h4>
+            <div class="pair">
+                <img src="1.png" alt="Image 1">
+                <audio controls>
+                    <source src="audios/dcase7/129.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="pair">
+                <img src="1.png" alt="Image 2">
+                <audio controls>
+                    <source src="audios/dcase7/129.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="pair">
+                <img src="1.png" alt="Image 3">
+                <audio controls>
+                    <source src="audios/dcase7/129.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+        <h2 id="evaluation results" style="text-align: center;"> </h2>
+        <div class="row">
+            <h4 id="evaluation results" style="text-align: left;">Top-1 matches from training samples</h4>
+            <div class="pair">
+                <img src="1.png" alt="Image 1">
+                <audio controls>
+                    <source src="audios/dcase7/129.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="pair">
+                <img src="1.png" alt="Image 2">
+                <audio controls>
+                    <source src="audios/dcase7/129.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="pair">
+                <img src="1.png" alt="Image 3">
+                <audio controls>
+                    <source src="audios/dcase7/129.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+
+        <h2 id="evaluation results" style="text-align: center;"> </h2>
+        <h2 id="evaluation results" style="text-align: center;"> </h2>
+        <h2 id="evaluation results" style="text-align: center;"> </h2>
+        <h2 id="evaluation results" style="text-align: center;"> </h2>
+	<h3 id="evaluation results" style="text-align: center;">Matched Pairs from Jung et al Generation</h3>
+        <div class="row">
+            <h4 id="evaluation results" style="text-align: left;">Generated audio samples</h4>
+            <div class="pair">
+                <img src="1.png" alt="Image 1">
+                <audio controls>
+                    <source src="audios/dcase7/129.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="pair">
+                <img src="1.png" alt="Image 2">
+                <audio controls>
+                    <source src="audios/dcase7/129.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="pair">
+                <img src="1.png" alt="Image 3">
+                <audio controls>
+                    <source src="audios/dcase7/129.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+        <h2 id="evaluation results" style="text-align: center;"> </h2>
+        <div class="row">
+            <h4 id="evaluation results" style="text-align: left;">Top-1 matches from training samples</h4>
+            <div class="pair">
+                <img src="1.png" alt="Image 1">
+                <audio controls>
+                    <source src="audios/dcase7/129.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="pair">
+                <img src="1.png" alt="Image 2">
+                <audio controls>
+                    <source src="audios/dcase7/129.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="pair">
+                <img src="1.png" alt="Image 3">
+                <audio controls>
+                    <source src="audios/dcase7/129.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+                    
 </div>
-
-
+<!-- <div class="row">
+	<div class="pair">
+		<img src="image4.jpg" alt="Image 4">
+		<audio controls>
+			<source src="audio4.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
+	</div>
+	<div class="pair">
+		<img src="image5.jpg" alt="Image 5">
+		<audio controls>
+			<source src="audio5.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
+	</div>
+	<div class="pair">
+		<img src="image6.jpg" alt="Image 6">
+		<audio controls>
+			<source src="audio6.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
+	</div>
+</div> -->
 
 <!-- Add more rows as needed -->
 </body>
 </html>
-In this example, we have audio-image pairs organized into rows, with each row containing three pairs. The flex property is used to make each .pair div occupy 30% of the row's width with spacing. You can adjust the percentage and add more rows with audio-image pairs as needed.
-
-
-
-
-
-
-
  
 </article>
 </main>
