@@ -10,6 +10,22 @@
 	<link rel="stylesheet" href="css/custom.css">
 	<link rel="stylesheet" href="css/normalize.css">
 
+	<style>
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+    
+
+        .pair {
+            text-align: center;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+
 	<title>EDMSound</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -137,53 +153,33 @@
 		</div>
 </div>
 
-<div class="row">
-	<div class="pair">
-		<img src="images/edm_2_gen.png" alt="Image 1">
-		<audio controls>
-			<source src="audios/dcase7/129.wav" type="audio/mpeg">
-			Your browser does not support the audio element.
-		</audio>
-	</div>
-	<div class="pair">
-		<img src="images/edm_2_gen.png" alt="Image 2">
-		<audio controls>
-			<source src="audios/dcase7/129.wav" type="audio/mpeg">
-			Your browser does not support the audio element.
-		</audio>
-	</div>
-	<div class="pair">
-		<img src="images/edm_2_gen.png" alt="Image 3">
-		<audio controls>
-			<source src="audios/dcase7/129.wav" type="audio/mpeg">
-			Your browser does not support the audio element.
-		</audio>
-	</div>
+<div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+	<h2 id="evaluation results" style="text-align: center;">Matched Pairs from EDMSound</h2>
+		<div class="row">
+			<div class="pair">
+				<img src="images/edm_2_gen.png" alt="Image 1", style="width: 400px; height: 150px;">
+				<audio controls>
+					<source src="audios/dcase7/129.wav" type="audio/mpeg">
+					Your browser does not support the audio element.
+				</audio>
+			</div>
+			<div class="pair">
+				<img src="images/edm_2_gen.png" alt="Image 1", style="width: 400px; height: 150px;">
+				<audio controls>
+					<source src="audios/dcase7/129.wav" type="audio/mpeg">
+					Your browser does not support the audio element.
+				</audio>
+			</div>
+			<div class="pair">
+				<img src="images/edm_2_gen.png" alt="Image 1", style="width: 400px; height: 150px;">
+				<audio controls>
+					<source src="audios/dcase7/129.wav" type="audio/mpeg">
+					Your browser does not support the audio element.
+				</audio>
+			</div>
+		</div>
 </div>
 
-<!-- <div class="row">
-	<div class="pair">
-		<img src="image4.jpg" alt="Image 4">
-		<audio controls>
-			<source src="audio4.mp3" type="audio/mpeg">
-			Your browser does not support the audio element.
-		</audio>
-	</div>
-	<div class="pair">
-		<img src="image5.jpg" alt="Image 5">
-		<audio controls>
-			<source src="audio5.mp3" type="audio/mpeg">
-			Your browser does not support the audio element.
-		</audio>
-	</div>
-	<div class="pair">
-		<img src="image6.jpg" alt="Image 6">
-		<audio controls>
-			<source src="audio6.mp3" type="audio/mpeg">
-			Your browser does not support the audio element.
-		</audio>
-	</div>
-</div> -->
 
 <!-- Add more rows as needed -->
 </body>
