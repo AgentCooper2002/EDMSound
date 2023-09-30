@@ -138,61 +138,49 @@
 </div>
 
 <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
-	<style>
+    <style>
         .row {
             display: flex;
             justify-content: space-between;
+            align-items: center; /* Vertically center the content */
         }
-    
 
         .pair {
             text-align: center;
             margin: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
         }
     </style>
-	<h2 id="evaluation results" style="text-align: center;">Matched Pairs from EDMSound</h2>
-		<div class="row">
-			<div class="pair">
-				<img src="images/edm_2_gen.png" alt="Image 1", style="width: 150px; height: 50px;">
-				<img src="images/edm_2_gen.png" alt="Image 1", style="width: 100px; height: 50px;">
-				<audio controls>
-					<source src="audios/dcase7/129.wav" type="audio/mpeg">
-					Your browser does not support the audio element.
-				</audio>
-				<audio controls>
-					<source src="audios/dcase7/129.wav" type="audio/mpeg">
-					Your browser does not support the audio element.
-				</audio>
-			</div>
-			<div class="pair">
-				<img src="images/edm_2_gen.png" alt="Image 1", style="width: 100px; height: 50px;">
-				<img src="images/edm_2_gen.png" alt="Image 1", style="width: 100px; height: 50px;">
-				<audio controls>
-					<source src="audios/dcase7/129.wav" type="audio/mpeg">
-					Your browser does not support the audio element.
-				</audio>
-				<audio controls>
-					<source src="audios/dcase7/129.wav" type="audio/mpeg">
-					Your browser does not support the audio element.
-				</audio>
-			</div>
-			<div class="pair">
-				<img src="images/edm_2_gen.png" alt="Image 1", style="width: 100px; height: 50px;">
-				<img src="images/edm_2_gen.png" alt="Image 1", style="width: 100px; height: 50px;">
-				<audio controls>
-					<source src="audios/dcase7/129.wav" type="audio/mpeg">
-					Your browser does not support the audio element.
-				</audio>
-				<audio controls>
-					<source src="audios/dcase7/129.wav" type="audio/mpeg">
-					Your browser does not support the audio element.
-				</audio>
-			</div>
-		</div>
+    <h2 id="evaluation results" style="text-align: center;">Matched Pairs from EDMSound</h2>
+    <div class="row">
+        <div class="pair">
+            <img src="images/edm_2_gen.png" alt="Image 1" style="width: 150px; height: 50px;">
+            <audio controls>
+                <source src="audios/dcase7/129.wav" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="pair">
+            <img src="images/edm_2_gen.png" alt="Image 2" style="width: 100px; height: 50px;">
+            <audio controls>
+                <source src="audios/dcase7/129.wav" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="pair">
+            <img src="images/edm_2_gen.png" alt="Image 3" style="width: 100px; height: 50px;">
+            <audio controls>
+                <source src="audios/dcase7/129.wav" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
 </div>
+
 
 
 <!-- Add more rows as needed -->
