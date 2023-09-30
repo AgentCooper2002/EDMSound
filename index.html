@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="css/custom.css">
 	<link rel="stylesheet" href="css/normalize.css">
 
-	<title>Audio Diffuser</title>
+	<title>EDMSound</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 
 </head>
@@ -25,15 +25,15 @@
 
 	<div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
 		<div class="text-center">
-		<h1>Audio Diffuser</h1>
+		<h1>EDMSound</h1>
 		</div>
 		<p>
-			<b>Introduction</b> 
-			We implement several score-based diffusion models under the EDM-framework for audio generation...
+			<b>Abstract</b> 
+			Diffusion models have showcased their capabilities in audio synthesis ranging over a variety of sounds. Exsiting models often operate on the latent domain with cascaded phase recovery modules to reconstruct waveform. It potentially introduces challenges in generating high-fidelity audio. In this project, we propose EDMSound, a diffusion-based generative model in spectrogram domain under the framework of elucidated diffusion models (EDM). Combining with efficient deterministic sampler, we achieved similar Fréchet audio distance (FAD) score as top-ranked baseline with only 10 steps and reached state-of-the-art performance with 50 steps on the DCASE2023 foley sound generation benchmark. We also revealed a potential concern regarding diffusion based audio generation models that they tend to generate samples with high perceptual similarity to the data from training data.
 		</p>
 
 <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
-	<h2 id="evaluation results" style="text-align: center;">Generation Results on SC09</h2>
+	<h2 id="evaluation results" style="text-align: center;">Unconditional Generation Results on SC09</h2>
 		<div class="table-responsive pt-3">
 			<table class="table table-hover pt-2">
 			<thead>
@@ -49,22 +49,13 @@
 			</thead>
 			<tbody>
             <tr>
-			<td style="text-align: center"><b>EDM-1d</b></td>
-			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/sc09/002.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/dcase_dev/002.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/sc09/002.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/sc09/002.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/sc09/002.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/sc09/002.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-			</tr>
-            <tr>
 			<td style="text-align: center"><b>EDM-complex</b></td>
-			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/sc09/002.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/dcase_dev/002.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/sc09/002.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/sc09/002.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/sc09/002.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/sc09/002.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/sc09/sc09_0.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/sc09/sc09_3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/sc09/sc09_5.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/sc09/sc09_6.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/sc09/sc09_7.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/sc09/sc09_8.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 			</tr>
 			</tbody>
 			</table>
