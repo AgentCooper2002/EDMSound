@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="Hugo 0.88.1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href=""https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/normalize.css">
+
+	<title>Audio Diffuser</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1091.0" data-gr-ext-installed="">
+
+<div class="container" >
+<header role="banner">
+</header>
+<main role="main">
+<article itemscope itemtype="https://schema.org/BlogPosting">
+
+	<div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+		<div class="text-center">
+		<h1>Audio Diffuser</h1>
+		</div>
+		<p>
+			<b>Introduction</b> 
+			We implement several score-based diffusion models under the EDM-framework for audio generation...
+		</p>
+
+<div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+	<h2 id="evaluation results" style="text-align: center;">Generation Results on SC09</h2>
+		<div class="table-responsive pt-3">
+			<table class="table table-hover pt-2">
+			<thead>
+			<tr>
+			<th style="text-align: center">Model</th>
+			<th style="text-align: center">Zero</th>
+			<th style="text-align: center">Three</th>
+			<th style="text-align: center">Five</th>
+			<th style="text-align: center">Six</th>
+			<th style="text-align: center">Seven</th>
+			<th style="text-align: center">Eight</th>
+			</tr>
+			</thead>
+			<tbody>
+            <tr>
+			<td style="text-align: center"><b>EDM-1d</b></td>
+			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/sc09/002.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/dcase_dev/002.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/sc09/002.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/sc09/002.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/sc09/002.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/sc09/002.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+			</tr>
+            <tr>
+			<td style="text-align: center"><b>EDM-complex</b></td>
+			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/sc09/002.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/dcase_dev/002.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/sc09/002.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/sc09/002.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/sc09/002.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+			<td style="text-align: center"><audio controls="controls" style="width: 140px;"><source src="audios/sc09/002.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+			</tr>
+			</tbody>
+			</table>
+		</div>
+</div>
+
+
+<div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+	<h2 id="evaluation results" style="text-align: center;">Conditional Generation Results on DCASE2023 Task-7</h2>
+		<div class="table-responsive pt-3">
+			<table class="table table-hover pt-2">
+			<thead>
+			<tr>
+			<th style="text-align: center; font-size: var(--dcaset-tab-font-size)">Model</th>
+			<th style="text-align: center; font-size: var(--dcaset-tab-font-size)">Ground Truth</th>
+			<th style="text-align: center; font-size: var(--dcaset-tab-font-size)" colspan="2">EDM-complex</th>
+			</tr>
+			</thead>
+			<tbody>
+
+            <tr>
+				<td style="text-align: center; vertical-align: middle"><b>Dog Bark</b></td>
+				<td style="text-align: center; vertical-align: middle"><audio controls="controls" style="width: 140px;"><source src="audios/dcase7/424.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+				<td style="text-align: center; vertical-align: middle"><audio controls="controls" style="width: 140px;"><source src="audios/dcase7/test_0_133.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+				<td style="text-align: center; vertical-align: middle"><audio controls="controls" style="width: 140px;"><source src="audios/dcase7/test_0_140.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+			</tr>
+			<tr>
+				<td style="text-align: center; vertical-align: middle"><b>Footstep</b></td>
+				<td style="text-align: center; vertical-align: middle"><audio controls="controls" style="width: 140px;"><source src="audios/dcase7/129.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+				<td style="text-align: center; vertical-align: middle"><audio controls="controls" style="width: 140px;"><source src="audios/dcase7/test_1_141.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+				<td style="text-align: center; vertical-align: middle"><audio controls="controls" style="width: 140px;"><source src="audios/dcase7/test_1_232.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+			</tr>
+			<tr>
+				<td style="text-align: center; vertical-align: middle"><b>Gunshot</b></td>
+				<td style="text-align: center; vertical-align: middle"><audio controls="controls" style="width: 140px;"><source src="audios/dcase7/633.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+				<td style="text-align: center; vertical-align: middle"><audio controls="controls" style="width: 140px;"><source src="audios/dcase7/test_2_184.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+				<td style="text-align: center; vertical-align: middle"><audio controls="controls" style="width: 140px;"><source src="audios/dcase7/test_2_485.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+			</tr>
+			<tr>
+				<td style="text-align: center; vertical-align: middle"><b>Keyboard</b></td>
+				<td style="text-align: center; vertical-align: middle"><audio controls="controls" style="width: 140px;"><source src="audios/dcase7/769.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+				<td style="text-align: center; vertical-align: middle"><audio controls="controls" style="width: 140px;"><source src="audios/dcase7/test_3_584.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+				<td style="text-align: center; vertical-align: middle"><audio controls="controls" style="width: 140px;"><source src="audios/dcase7/test_3_612.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+			</tr>
+			<tr>
+				<td style="text-align: center; vertical-align: middle"><b>Moving Motor Vehicle</b></td>
+				<td style="text-align: center; vertical-align: middle"><audio controls="controls" style="width: 140px;"><source src="audios/dcase7/319.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+				<td style="text-align: center; vertical-align: middle"><audio controls="controls" style="width: 140px;"><source src="audios/dcase7/test_4_669.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+				<td style="text-align: center; vertical-align: middle"><audio controls="controls" style="width: 140px;"><source src="audios/dcase7/test_4_676.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+			</tr>
+			<tr>
+				<td style="text-align: center; vertical-align: middle"><b>Rain</b></td>
+				<td style="text-align: center; vertical-align: middle"><audio controls="controls" style="width: 140px;"><source src="audios/dcase7/511.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+				<td style="text-align: center; vertical-align: middle"><audio controls="controls" style="width: 140px;"><source src="audios/dcase7/test_5_642.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+				<td style="text-align: center; vertical-align: middle"><audio controls="controls" style="width: 140px;"><source src="audios/dcase7/test_5_292.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+			</tr>
+			<tr>
+				<td style="text-align: center; vertical-align: middle"><b>Sneeze, Cough</b></td>
+				<td style="text-align: center; vertical-align: middle"><audio controls="controls" style="width: 140px;"><source src="audios/dcase7/428.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+				<td style="text-align: center; vertical-align: middle"><audio controls="controls" style="width: 140px;"><source src="audios/dcase7/test_6_601.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+				<td style="text-align: center; vertical-align: middle"><audio controls="controls" style="width: 140px;"><source src="audios/dcase7/test_6_664.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+			</tr>
+			
+			
+			</tbody>
+			</table>
+		</div>
+</div>
+
+ 
+</article>
+</main>
+</div>
+
+</body>
+</html>
