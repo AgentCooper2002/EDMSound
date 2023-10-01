@@ -161,11 +161,221 @@
             max-width: 100%;
             height: auto;
         }
+        .vertical-line {
+            border-right: 1px solid #393939;
+            border-bottom: 1px solid #393939;
+        }
+        .horizontal-line {
+            border-bottom: 1px solid #393939;
+        }
     </style>
     <h2 id="evaluation results" style="text-align: center;"> Section 2: Replication Detectoin </h2>
     <h2 id="evaluation results" style="text-align: center;"> </h2>
-	<h3 id="evaluation results" style="text-align: center;">Matched Pairs from EDMSound Generation</h3>
-        <div class="row">
+	<div class="table-responsive pt-3">
+        <table class="table table-hover pt-2">
+        <thead>
+        <tr>
+        <th style="text-align: center">Model</th>
+        <th style="text-align: center">Generated Sample</th>
+        <th style="text-align: center">Top-1 Matched Training Sample</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="vertical-line" style="vertical-align: middle" rowspan="3" ><b>EDMSound</b></td>
+            <td style="text-align: center">
+                <div class="pair">
+                    <img src="images/edm_2_gen.png" alt="Image 1">
+                    <audio controls>
+                        <source src="audios/copy_detection/edm_2_gen.wav" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </td>
+            <td style="text-align: center">
+                <div class="pair">
+                    <img src="images/edm_2_train.png" alt="Image 1">
+                    <audio controls>
+                        <source src="audios/copy_detection/edm_2_train.wav" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center">
+                <div class="pair">
+                    <img src="images/edm_117_gen.png" alt="Image 2">
+                    <audio controls>
+                        <source src="audios/copy_detection/edm_117_gen.wav" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </td>
+            <td style="text-align: center">
+                <div class="pair">
+                    <img src="images/edm_117_train.png" alt="Image 2">
+                    <audio controls>
+                        <source src="audios/copy_detection/edm_117_train.wav" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="horizontal-line" style="text-align: center">
+                <div class="pair">
+                    <img src="images/edm_377_gen.png" alt="Image 3">
+                    <audio controls>
+                        <source src="audios/copy_detection/edm_377_gen.wav" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </td>
+            <td class="horizontal-line" style="text-align: center">
+                <div class="pair">
+                    <img src="images/edm_377_train.png" alt="Image 3">
+                    <audio controls>
+                        <source src="audios/copy_detection/edm_377_train.wav" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="vertical-line" style="vertical-align: middle" rowspan="3" ><b>Scheibler et al</b></td>
+            <td style="text-align: center">
+                <div class="pair">
+                    <img src="images/sb_67_gen.png" alt="Image 1">
+                    <audio controls>
+                        <source src="audios/copy_detection/sb_67_gen.wav" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </td>
+            <td style="text-align: center">
+                <div class="pair">
+                    <img src="images/sb_67_train.png" alt="Image 1">
+                    <audio controls>
+                        <source src="audios/copy_detection/sb_67_train.wav" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center">
+                <div class="pair">
+                    <img src="images/sb_214_gen.png" alt="Image 2">
+                    <audio controls>
+                        <source src="audios/copy_detection/sb_214_gen.wav" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </td>
+            <td style="text-align: center">
+                <div class="pair">
+                    <img src="images/sb_214_train.png" alt="Image 2">
+                    <audio controls>
+                        <source src="audios/copy_detection/sb_214_train.wav" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="horizontal-line" style="text-align: center">
+                <div class="pair">
+                    <img src="images/sb_600_gen.png" alt="Image 3">
+                    <audio controls>
+                        <source src="audios/copy_detection/sb_600_gen.wav" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </td>
+            <td class="horizontal-line" style="text-align: center">
+                <div class="pair">
+                    <img src="images/sb_600_train.png" alt="Image 3">
+                    <audio controls>
+                        <source src="audios/copy_detection/sb_600_train.wav" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="vertical-line" style="vertical-align: middle" rowspan="3" ><b>Jung et al</b></td>
+            <td style="text-align: center">
+                <div class="pair">
+                    <img src="images/jung_41_gen.png" alt="Image 1">
+                    <audio controls>
+                        <source src="audios/copy_detection/jung_41_gen.wav" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </td>
+            <td style="text-align: center">
+                <div class="pair">
+                    <img src="images/jung_41_train.png" alt="Image 1">
+                    <audio controls>
+                        <source src="audios/copy_detection/jung_41_train.wav" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center">
+                <div class="pair">
+                    <img src="images/jung_387_gen.png" alt="Image 2">
+                    <audio controls>
+                        <source src="audios/copy_detection/jung_387_gen.wav" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </td>
+            <td style="text-align: center">
+                <div class="pair">
+                    <img src="images/jung_387_train.png" alt="Image 2">
+                    <audio controls>
+                        <source src="audios/copy_detection/jung_387_train.wav" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="horizontal-line" style="text-align: center">
+                <div class="pair">
+                    <img src="images/jung_580_gen.png" alt="Image 3">
+                    <audio controls>
+                        <source src="audios/copy_detection/jung_580_gen.wav" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </td>
+            <td class="horizontal-line" style="text-align: center">
+                <div class="pair">
+                    <img src="images/jung_580_train.png" alt="Image 3">
+                    <audio controls>
+                        <source src="audios/copy_detection/jung_580_train.wav" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </td>
+        </tr>
+
+        </tbody>
+        </table>
+
+    </div>
+
+
+
+
+        <!-- <div class="row">
             <h4 id="evaluation results" style="text-align: left;">Generated audio samples</h4>
             <div class="pair">
                 <img src="images/edm_2_gen.png" alt="Image 1">
@@ -213,9 +423,9 @@
                     Your browser does not support the audio element.
                 </audio>
             </div>
-        </div>
+        </div> -->
 
-        <h2 id="evaluation results" style="text-align: center;"> </h2>
+        <!-- <h2 id="evaluation results" style="text-align: center;"> </h2>
         <h2 id="evaluation results" style="text-align: center;"> </h2>
         <h2 id="evaluation results" style="text-align: center;"> </h2>
         <h2 id="evaluation results" style="text-align: center;"> </h2>
@@ -268,9 +478,9 @@
                     Your browser does not support the audio element.
                 </audio>
             </div>
-        </div>
+        </div> -->
 
-        <h2 id="evaluation results" style="text-align: center;"> </h2>
+        <!-- <h2 id="evaluation results" style="text-align: center;"> </h2>
         <h2 id="evaluation results" style="text-align: center;"> </h2>
         <h2 id="evaluation results" style="text-align: center;"> </h2>
         <h2 id="evaluation results" style="text-align: center;"> </h2>
@@ -323,9 +533,9 @@
                     Your browser does not support the audio element.
                 </audio>
             </div>
-        </div>
+        </div> -->
 
-        <h2 id="evaluation results" style="text-align: center;"> </h2>
+        <!-- <h2 id="evaluation results" style="text-align: center;"> </h2>
         <h2 id="evaluation results" style="text-align: center;"> </h2>
         <h2 id="evaluation results" style="text-align: center;"> </h2>
         <h2 id="evaluation results" style="text-align: center;"> </h2>
@@ -378,7 +588,7 @@
                     Your browser does not support the audio element.
                 </audio>
             </div>
-        </div>
+        </div> -->
                     
 </div>
 
