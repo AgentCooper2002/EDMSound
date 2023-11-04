@@ -2,9 +2,11 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+logs
+audioMAE
 # C extensions
 *.so
+*.pdf
 
 # Distribution / packaging
 .Python

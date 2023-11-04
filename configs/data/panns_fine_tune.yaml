@@ -1,0 +1,12 @@
+_target_: src.data.panns_vector_datamodule.PANNsFineTuneDataModule
+data_dir: ${paths.data_dir}/DCASEFoleySoundSynthesisDevSet/
+mixup_m: 0.1
+audio_len: 128000
+target_sample_rate: 32000
+data_sample_rate: 22050
+num_class: 10
+split: 1
+return_pairs: True
+batch_size: 4
+num_workers: 8
+pin_memory: False

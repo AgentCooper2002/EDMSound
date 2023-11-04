@@ -1,0 +1,54 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment=example
+
+defaults:
+  - override /data: clap_fine_tune.yaml
+  - override /model: fine_tune_linear_layer.yaml
+  - override /callbacks: custom_exp2.yaml
+  - override /trainer: gpu.yaml
+
+# all parameters below will be merged with parameters from default configurations set above
+# this allows you to overwrite only specified parameters
+
+tags: ["dcaseDev", "CLAP"]
+audio_len: 192000
+audio_sample_rate: 48000
+split_chunk: 1
+seed: 12345
+num_classes: 7
+
+trainer:
+  min_epochs: 200
+  max_epochs: 200
+
+model:
+  _target_: src.models.audioMAE_fine_tune_module.AudioMAEFineTuneModule
+  sample_rate: ${audio_sample_rate}
+  split: ${split_chunk}
+  num_class: ${num_classes}
+  optimizer:
+    _target_: torch.optim.Adam
+    _partial_: true
+    lr: 1e-4
+    betas : [0.9, 0.99]
+
+data:
+  _target_: src.data.clap_vector_datamodule.CLAPFineTuneDataModule
+  data_dir: ${paths.data_dir}/DCASEFoleySoundSynthesisDevSet/
+  mixup_m: -1
+  audio_len: 192000
+  target_sample_rate: ${audio_sample_rate}
+  data_sample_rate: 22050
+  num_class: 10
+  split: ${split_chunk}
+  return_pairs: False
+  batch_size: 256
+  num_workers: 0
+  pin_memory: False
+
+logger:
+  wandb:
+    tags: ${tags}
+    group: "clap-dcaseDev"

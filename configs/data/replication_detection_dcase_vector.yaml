@@ -1,0 +1,7 @@
+_target_: src.data.replication_detection_dcase_vector_datamodule.ReplicationDetectionDataModule
+q_pkl_path: ${paths.data_dir}/DCASEFoleySoundSynthesisDevSet/
+v_pkl_path: /home/yutong/EDMsound/logs/eval/runs/dcase_complex_cfg_700/tensorboard/test_samples/
+num_class: 10
+batch_size: 8
+num_workers: 8
+pin_memory: False
