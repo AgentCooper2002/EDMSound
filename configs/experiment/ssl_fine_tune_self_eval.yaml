@@ -21,7 +21,6 @@ trainer:
   max_epochs: 1
 
 model:
-  _target_: src.models.audioMAE_fine_tune_module.AudioMAEFineTuneModule
   sample_rate: 32000
   zero_shot: True
   num_class: ${num_classes}
@@ -29,8 +28,8 @@ model:
   
 data:
   _target_: src.data.replication_detection_dcase_vector_datamodule.ReplicationDetectionDataModule
-  q_pkl_path: ${paths.data_dir}/DCASEFoleySoundSynthesisDevSet/GT_panns_4.pkl
-  v_pkl_path: ${paths.data_dir}/DCASEFoleySoundSynthesisDevSet/GT_panns_4.pkl
+  q_pkl_path: ${paths.data_dir}/DCASEFoleySoundSynthesisDevSet/GT_clap_zs_4.pkl
+  v_pkl_path: ${paths.data_dir}/DCASEFoleySoundSynthesisDevSet/GT_clap_zs_4.pkl
   batch_size: 16384
   num_workers: 32
   pin_memory: False

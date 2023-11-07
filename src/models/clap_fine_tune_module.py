@@ -12,7 +12,7 @@ import torch.nn.functional as F
 from einops import rearrange
 
 class LinearLayer_triplet(nn.Module):
-    def __init__(self, layer_shapes=[2048, 128, 128]):
+    def __init__(self, layer_shapes=[512, 128, 128]):
         super().__init__()
         self.fc_layer_1 = nn.Linear(in_features=layer_shapes[0], 
                                  out_features=layer_shapes[1])
@@ -29,7 +29,7 @@ class LinearLayer_triplet(nn.Module):
         return nn_out
 
 class LinearLayer_sigmoid(nn.Module):
-    def __init__(self, layer_shapes=[768, 128, 256, 128]):
+    def __init__(self, layer_shapes=[512, 256, 256, 128]):
         super().__init__()
         self.q_layer = nn.Linear(in_features=layer_shapes[0], 
                                  out_features=layer_shapes[1])
@@ -62,7 +62,7 @@ class LinearLayer_sigmoid(nn.Module):
         # logits = self.sigmoid(self.classification_layer(dense_out))
         # return logits
 
-class AudioMAEFineTuneModule(LightningModule):
+class CLAPFineTuneModule(LightningModule):
     """ AudioDiffModule.
     https://github.com/archinetai/audio-diffusion-pytorch
     """

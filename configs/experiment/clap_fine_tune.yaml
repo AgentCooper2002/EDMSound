@@ -24,7 +24,6 @@ trainer:
   max_epochs: 200
 
 model:
-  _target_: src.models.audioMAE_fine_tune_module.AudioMAEFineTuneModule
   sample_rate: ${audio_sample_rate}
   split: ${split_chunk}
   num_class: ${num_classes}

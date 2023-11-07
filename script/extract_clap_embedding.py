@@ -12,6 +12,7 @@ split_duration = 4
 split_hop = split_duration / 2
 extract_obj = 'GEN'
 pkl_path = '/storageNVME/yutong/DCASEFoleySoundSynthesisDevSet/'
+pkl_path = 'script/'
 audio_path = '/storageNVME/yutong/DCASEFoleySoundSynthesisDevSet/' if extract_obj == 'GT' else '/storageNVME/yutong/AudioFiles/Submissions/A/TASys08'
 
 # Global vars

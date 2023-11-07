@@ -1,4 +1,4 @@
-_target_: src.models.audioMAE_fine_tune_module.AudioMAEFineTuneModule
+_target_: src.models.clap_fine_tune_module.CLAPFineTuneModule
 sample_rate: 16000
 split: 4
 zero_shot: False

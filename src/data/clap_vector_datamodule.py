@@ -11,7 +11,46 @@ import torchaudio.transforms as T
 import torch.nn as nn
 import laion_clap
 import pickle
-from .audioMAE_vector_datamodule import Scale, Shift
+
+class Scale(nn.Module):
+    def __init__(self, proba=1., min=0.25, max=1.25):
+        super().__init__()
+        self.proba = proba
+        self.min = min
+        self.max = max
+
+    def forward(self, wav):
+        batch, time = wav.size()
+        device = wav.device
+        if random.random() < self.proba:
+            scales = torch.empty(batch, 1, device=device).uniform_(self.min, self.max)
+            wav *= scales
+        return wav
+
+class Shift(nn.Module):
+    """
+    Randomly shift audio in time by up to `shift` samples.
+    """
+    def __init__(self, shift=8192, same=False):
+        super().__init__()
+        self.shift = shift
+        self.same = same
+
+    def forward(self, wav):
+        shift = int(random.random() * self.shift)
+        batch, sources, channels, time = wav.size()
+        length = time - shift
+        if shift > 0: 
+            srcs = 1 if self.same else sources
+            offsets = torch.randint(shift, [batch, srcs, 1, 1], device=wav.device)
+            offsets = offsets.expand(-1, sources, channels, -1)
+            indexes = torch.arange(length, device=wav.device)
+            wav = wav.gather(3, indexes + offsets)
+            if time > wav.shape[-1]:
+                padding_size = time - wav.shape[-1]
+                padding = (0, padding_size)
+                wav = torch.nn.functional.pad(wav, padding, "constant", value=0)
+        return wav
 
 class CLAPFineTuneDataset(Dataset):
     def __init__(self, path, 
