@@ -1,5 +1,5 @@
 # EDMSound
-Codebase and project page for [EDMSound](https://arxiv.org/abs/2311.08667), [Demopage](https://tinyurl.com/4rds3bnn)
+Codebase and project page for [EDMSound](https://arxiv.org/abs/2311.08667), [Demopage](https://tinyurl.com/4rds3bnn). This codebase is only for the copy detection part in the paper. The code for the EDMSound diffusion model will be released in our follow-up work.
 
 ## Description
 Diffusion models have showcased their capabilities in audio synthesis ranging over a variety of sounds. Existing models often operate on the latent domain with cascaded phase recovery modules to reconstruct waveform. It potentially introduces challenges in generating high-fidelity audio. In this paper, we propose EDMSound, a diffusion-based generative model in spectrogram domain under the framework of elucidated diffusion models (EDM). Combining with efficient deterministic sampler, we achieved similar Fréchet audio distance (FAD) score as top-ranked baseline with only 10 steps and reached state-of-the-art performance with 50 steps on the DCASE2023 foley sound generation benchmark. We also revealed a potential concern regarding diffusion based audio generation models that they tend to generate samples with high perceptual similarity to the data from training data.
